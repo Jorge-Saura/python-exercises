@@ -16,3 +16,7 @@ def find_duplicate_number_in_integer_list(listOfIntegers:list):
 def intersect(list1:list, list2:list):
 
     return [x for x in set(list1) if x in list2]
+
+# Check if two strings are anagrams
+def is_anagram(s1:str, s2:str):
+    return next((False for x in set(s1+s2) if s1.count(x) != s2.count(s2)), True)

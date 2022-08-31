@@ -76,6 +76,23 @@ class TestBasics(unittest.TestCase):
 
             self.assertEqual(result,[])
 
+        def test_is_anagram(self):
+            s1 = "delira"
+            s2 = "lidera"
+
+            result = basics.is_anagram(s1,s2)
+
+            self.assertEqual(result, True)
+
+        def test_is_anagrams_return_false_if_not_anagrams(self):
+            s1 = "deliran"
+            s2 = "lideras"
+
+            result = basics.is_anagram(s1,s2)
+
+            self.assertEqual(result, False)
+
+
         # def test_example(self):
         #     self.assertEqual('resultado_obtenido','resultado_esperado')
 
