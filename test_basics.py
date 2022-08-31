@@ -30,6 +30,28 @@ class TestBasicsOpe(unittest.TestCase):
             result = basics.get_missing_number_1_100(listOfNumbers)
             self.assertEqual(result,100)
 
+        def test_find_duplicate_number_in_integer_list_1_repeated_item(self):
+            listOfIntegers = [1,2,3,4,1,6,19]
+
+            result = basics.find_duplicate_number_in_integer_list(listOfIntegers)
+
+            self.assertEqual(result,1)
+
+        def test_find_duplicate_number_in_integer_list_more_than_1_item_repeated(self):
+            listOfIntegers = [1,2,3,4,1,6,2,19]
+
+            result = basics.find_duplicate_number_in_integer_list(listOfIntegers)
+
+            self.assertEqual(result,1)
+
+        def test_find_duplicate_number_in_integer_list_more_than_1_item_repeated_return_first_item_repeated(self):
+            listOfIntegers = [1,2,3,2,1,6,2,19]
+
+            result = basics.find_duplicate_number_in_integer_list(listOfIntegers)
+
+            self.assertEqual(result,1)
+
+
         # def test_example(self):
         #     self.assertEqual('resultado_obtenido','resultado_esperado')
 
