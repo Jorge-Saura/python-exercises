@@ -28,3 +28,10 @@ def get_min_max_from_list_of_integers(listOfIntegers:list):
 # Remove all duplicates form list
 def remove_all_duplicates_from_list(listOfItems:list):
     return [listOfItems[x] for x in list(range(len(listOfItems))) if listOfItems[x] not in listOfItems[:x]]
+
+# Reverse string using recursion
+def reverse_string_with_recursion(s1:str):
+    if(len(s1)>1):
+        return reverse_string_with_recursion(s1[1:]) + s1[0]
+    else:
+        return s1

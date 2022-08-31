@@ -135,6 +135,13 @@ class TestBasics(unittest.TestCase):
 
             self.assertEqual(result, [1,2,"python",3,6,4,"hi"])
 
+        def test_reverse_string_with_recursion(self):
+            s1 = 'python'
+
+            result = basics.reverse_string_with_recursion(s1)
+
+            self.assertEqual(result, 'nohtyp')
+
         # def test_example(self):
         #     self.assertEqual('resultado_obtenido','resultado_esperado')
 
