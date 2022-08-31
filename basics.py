@@ -22,6 +22,9 @@ def is_anagram(s1:str, s2:str):
     return next((False for x in set(s1+s2) if s1.count(x) != s2.count(s2)), True)
 
 # Find max and min in unsorted list
-
 def get_min_max_from_list_of_integers(listOfIntegers:list):
     return [min(listOfIntegers),max(listOfIntegers)]
+
+# Remove all duplicates form list
+def remove_all_duplicates_from_list(listOfItems:list):
+    return [listOfItems[x] for x in list(range(len(listOfItems))) if listOfItems[x] not in listOfItems[:x]]

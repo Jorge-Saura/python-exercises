@@ -106,6 +106,35 @@ class TestBasics(unittest.TestCase):
 
             self.assertEqual(result, [1,8])
 
+        def test_remove_all_duplicates_from_list(self):
+            listOfIntegers = [1,2,3,1]
+
+            result = basics.remove_all_duplicates_from_list(listOfIntegers)
+
+            self.assertEqual(result, [1,2,3])
+
+        def test_remove_all_duplicates_from_list_only_1_different(self):
+            listOfIntegers = [1,1,1]
+
+            result = basics.remove_all_duplicates_from_list(listOfIntegers)
+
+            self.assertEqual(result, [1])
+
+
+        def test_remove_all_duplicates_from_list_all_items_in_position(self):
+            listOfIntegers = [1,2,5,2,4,5,5,4,4,4,4,4,1]
+
+            result = basics.remove_all_duplicates_from_list(listOfIntegers)
+
+            self.assertEqual(result, [1,2,5,4])
+
+        def test_remove_all_duplicates_from_list_with_different_types(self):
+            listOfIntegers = [1,2,"python",2,3,6,4,"hi","python",3]
+
+            result = basics.remove_all_duplicates_from_list(listOfIntegers)
+
+            self.assertEqual(result, [1,2,"python",3,6,4,"hi"])
+
         # def test_example(self):
         #     self.assertEqual('resultado_obtenido','resultado_esperado')
 
