@@ -20,3 +20,8 @@ def intersect(list1:list, list2:list):
 # Check if two strings are anagrams
 def is_anagram(s1:str, s2:str):
     return next((False for x in set(s1+s2) if s1.count(x) != s2.count(s2)), True)
+
+# Find max and min in unsorted list
+
+def get_min_max_from_list_of_integers(listOfIntegers:list):
+    return [min(listOfIntegers),max(listOfIntegers)]

@@ -92,6 +92,19 @@ class TestBasics(unittest.TestCase):
 
             self.assertEqual(result, False)
 
+        def test_min_max_from_list_of_integers(self):
+            listOfIntegers = [1,2,3]
+
+            result = basics.get_min_max_from_list_of_integers(listOfIntegers)
+
+            self.assertEqual(result, [1,3])
+
+        def test_min_max_from_list_of_integers_unsorted_list(self):
+            listOfIntegers = [7,3,4,8,5,2,1]
+
+            result = basics.get_min_max_from_list_of_integers(listOfIntegers)
+
+            self.assertEqual(result, [1,8])
 
         # def test_example(self):
         #     self.assertEqual('resultado_obtenido','resultado_esperado')
