@@ -35,3 +35,8 @@ def reverse_string_with_recursion(s1:str):
         return reverse_string_with_recursion(s1[1:]) + s1[0]
     else:
         return s1
+
+# Find pairs of integers in a list so that their sum is equal to integer x
+def find_pairs(listOfIntegers:list, x:int):
+    
+    return [ [listOfIntegers[n],x-listOfIntegers[n]] for n in list(range(len(listOfIntegers))) if x-listOfIntegers[n] in listOfIntegers[n+1:]]
