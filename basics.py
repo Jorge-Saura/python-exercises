@@ -54,4 +54,7 @@ def compute_fibonacci(n:int):
         fibonacciSequence = compute_fibonacci(n-1)
         fibonacciSequence.append(fibonacciSequence[-1]+fibonacciSequence[-2])
         return fibonacciSequence
-    
+
+# Check if a string is a palindrome
+def is_palindrome(s:str):
+    return  all([True if s[x] == s[-x-1] else False for x in list(range(len(s)))])

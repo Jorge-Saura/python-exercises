@@ -172,21 +172,34 @@ class TestBasics(unittest.TestCase):
             self.assertEqual(result, [0,1])
 
         def test_compute_fibonacci_3(self):
-            
-
             result = basics.compute_fibonacci(3)
 
             self.assertEqual(result, [0,1,1])
 
         def test_compute_fibonacci_7(self):
-            
-
             result = basics.compute_fibonacci(7)
 
             self.assertEqual(result, [0,1,1,2,3,5,8])
 
+        def test_is_palindrome_ana(self):
+            result = basics.is_palindrome('ana')
 
+            self.assertEqual(result, True)
 
+        def test_is_palindrome_anna(self):
+            result = basics.is_palindrome('anna')
+
+            self.assertEqual(result, True)
+
+        def test_is_palindrome_somosonosomos(self):
+            result = basics.is_palindrome('somosonosomos')
+
+            self.assertEqual(result, True)
+
+        def test_is_palindrome_no_palindrome(self):
+            result = basics.is_palindrome('otracosa')
+
+            self.assertEqual(result, False)
 
         # def test_example(self):
         #     self.assertEqual('resultado_obtenido','resultado_esperado')
