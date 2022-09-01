@@ -40,3 +40,18 @@ def reverse_string_with_recursion(s1:str):
 def find_pairs(listOfIntegers:list, x:int):
     
     return [ [listOfIntegers[n],x-listOfIntegers[n]] for n in list(range(len(listOfIntegers))) if x-listOfIntegers[n] in listOfIntegers[n+1:]]
+
+# Compute the firs n fiboancci numbers
+
+def compute_fibonacci(n:int):
+    if n == 0:
+        return []
+    elif n  == 1:
+        return [0]
+    elif n == 2:
+        return [0,1] 
+    else:
+        fibonacciSequence = compute_fibonacci(n-1)
+        fibonacciSequence.append(fibonacciSequence[-1]+fibonacciSequence[-2])
+        return fibonacciSequence
+    

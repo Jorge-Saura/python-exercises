@@ -156,6 +156,38 @@ class TestBasics(unittest.TestCase):
 
             self.assertEqual(result, [[1,3],[2,2]])
 
+        def test_compute_fibonacci_0(self):
+            result = basics.compute_fibonacci(0)
+
+            self.assertEqual(result, [])
+
+        def test_compute_fibonacci_1(self):
+            result = basics.compute_fibonacci(1)
+
+            self.assertEqual(result, [0])
+
+        def test_compute_fibonacci_2(self):
+            result = basics.compute_fibonacci(2)
+
+            self.assertEqual(result, [0,1])
+
+        def test_compute_fibonacci_3(self):
+            
+
+            result = basics.compute_fibonacci(3)
+
+            self.assertEqual(result, [0,1,1])
+
+        def test_compute_fibonacci_7(self):
+            
+
+            result = basics.compute_fibonacci(7)
+
+            self.assertEqual(result, [0,1,1,2,3,5,8])
+
+
+
+
         # def test_example(self):
         #     self.assertEqual('resultado_obtenido','resultado_esperado')
 
