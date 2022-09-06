@@ -201,6 +201,38 @@ class TestBasics(unittest.TestCase):
 
             self.assertEqual(result, False)
 
+        def test_get_permutations(self):
+            result = basics.get_permutations('ab')
+
+            self.assertEqual(result, ['ab','ba'])            
+
+        def test_get_permutations_3_chars(self):
+            result = basics.get_permutations('123')
+
+            self.assertEqual(result, ['123','132','213','231','312','321'])  
+
+        # # # def test_get_all_distinct_susbset_of_sums(self):
+        # # #     result = basics.get_all_distinct_susbset_of_sums([1,2,3], 3)
+
+        # # #     self.assertEqual(result, [[1,2],[2,1],[3]])
+
+
+        # # # def test_get_all_distinct_susbset_of_sums_repeating_numbers(self):
+        # # #     result = basics.get_all_distinct_susbset_of_sums([1,2,2,3], 4)
+
+        # # #     self.assertEqual(result, [[1,3],[2,2],[3,1]])
+
+        # # # def test_get_all_distinct_susbset_of_sums_any_combination_match(self):
+        # # #     result = basics.get_all_distinct_susbset_of_sums([1,2,2,3], 10)
+
+        # # #     self.assertEqual(result, [])
+
+        # # # def test_get_all_distinct_susbset_of_sums_3_numbers_match(self):
+        # # #     result = basics.get_all_distinct_susbset_of_sums([1,1,1,3,4], 7)
+
+        # # #     self.assertEqual(result, [[1,1,1,4],[3,4],[4,3]])
+
+
         # def test_example(self):
         #     self.assertEqual('resultado_obtenido','resultado_esperado')
 

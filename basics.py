@@ -1,4 +1,7 @@
 # Check if list contain element x
+from msilib import sequence
+
+
 def list_contains_element(listOfElements:list, x:int):
     return x in listOfElements
 
@@ -58,3 +61,21 @@ def compute_fibonacci(n:int):
 # Check if a string is a palindrome
 def is_palindrome(s:str):
     return  all([True if s[x] == s[-x-1] else False for x in list(range(len(s)))])
+
+
+
+
+# Get all the permutations of a string
+def get_permutations(string):
+    permutation_list = []
+    if len(string) == 1:
+        return [string]
+    else:
+        for char in string:
+            for a in get_permutations(string.replace(char, "", 1)):
+                permutation_list.append(char + a)
+            
+            # [permutation_list.append(char + a) for a in get_permutations(string.replace(char, "", 1))]
+    return permutation_list
+     
+
