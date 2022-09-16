@@ -45,3 +45,9 @@ def is_palindrome(s:str):
 def get_permutations(string:str):
     pass
 
+# Multi fibonacci. Create a function that execute the fiboacci sequence for a sum of n elements
+# If n = 3 and your input list is [1,1,2] your next element will be 4, and the next 7
+# If n = 4 and your imput list is [1,1,1,3] your next element will be 6, and the next 11
+# n must be greater or equal than the number of elements in the initial list 
+def multi_fibonacci(iterarations:int, initialList: list, n:int):
+    pass

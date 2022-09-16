@@ -211,31 +211,15 @@ class TestBasics(unittest.TestCase):
 
             self.assertEqual(result, ['123','132','213','231','312','321'])  
 
-        # # # def test_get_all_distinct_susbset_of_sums(self):
-        # # #     result = basics.get_all_distinct_susbset_of_sums([1,2,3], 3)
+        def test_multi_fibonacci(self):
+            result = basics.multi_fibonacci(5,[1,1,1], 3)
 
-        # # #     self.assertEqual(result, [[1,2],[2,1],[3]])
+            self.assertEqual(basics.multi_fibonacci(7,[0,1], 2), [0,1,1,2,3,5,8])
 
+            self.assertEqual(basics.multi_fibonacci(5,[1,1,1], 3), [1,1,1,3,5])
+            self.assertEqual(basics.multi_fibonacci(6,[1,1,1], 3), [1,1,1,3,5,9])
 
-        # # # def test_get_all_distinct_susbset_of_sums_repeating_numbers(self):
-        # # #     result = basics.get_all_distinct_susbset_of_sums([1,2,2,3], 4)
-
-        # # #     self.assertEqual(result, [[1,3],[2,2],[3,1]])
-
-        # # # def test_get_all_distinct_susbset_of_sums_any_combination_match(self):
-        # # #     result = basics.get_all_distinct_susbset_of_sums([1,2,2,3], 10)
-
-        # # #     self.assertEqual(result, [])
-
-        # # # def test_get_all_distinct_susbset_of_sums_3_numbers_match(self):
-        # # #     result = basics.get_all_distinct_susbset_of_sums([1,1,1,3,4], 7)
-
-        # # #     self.assertEqual(result, [[1,1,1,4],[3,4],[4,3]])
-
-
-        # def test_example(self):
-        #     self.assertEqual('resultado_obtenido','resultado_esperado')
-
+            self.assertEqual(basics.multi_fibonacci(7,[0,1,1,1,2], 5), [0,1,1,1,2,5,10])
 
 
 if __name__ == '__main__':
