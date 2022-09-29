@@ -51,3 +51,7 @@ def get_permutations(string:str):
 # n must be greater or equal than the number of elements in the initial list 
 def multi_fibonacci(iterarations:int, initialList: list, n:int):
     pass
+
+# Get factors of a given numbers
+def get_factors(n:int) -> set:
+    pass

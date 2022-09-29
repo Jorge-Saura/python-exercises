@@ -85,13 +85,13 @@ def multi_fibonacci(iterarations:int, initialList: list, n:int):
     return result
 
 
+# Get factors of a given numbers
+def get_factors(n:int) -> set:
 
-# Get factors of a given numbers (limited to 10 factors)
-def get_factors(n:int) -> list[int]:
-    pass
-
-
-# Given a list of integers and one number n, return all the possible combinations of sums in the list 
-# that are equal to n
-def get_sum_combinations(l:list[int], n:int) -> list[list]:
-    pass
+    factors = set({1,n})
+    max_factor = int((n**.5)+1)
+    for i in range(2, max_factor):
+        if n % i == 0:
+            factors |= {i, n // i}
+    print(factors)
+    return factors
