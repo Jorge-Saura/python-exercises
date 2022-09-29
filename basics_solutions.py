@@ -83,4 +83,15 @@ def multi_fibonacci(iterarations:int, initialList: list, n:int):
     for i in range(iterarations-n):
         result.append(sum(result[i:i+n]))
     return result
-     
+
+
+# Get factors of a given numbers
+def get_factors(n:int) -> set:
+
+    factors = set({1,n})
+    max_factor = int((n**.5)+1)
+    for i in range(2, max_factor):
+        if n % i == 0:
+            factors |= {i, n // i}
+    print(factors)
+    return factors

@@ -1,6 +1,6 @@
 import unittest
 
-import basics
+import basics as basics
 
 
 class TestBasics(unittest.TestCase):
@@ -221,6 +221,11 @@ class TestBasics(unittest.TestCase):
 
             self.assertEqual(basics.multi_fibonacci(7,[0,1,1,1,2], 5), [0,1,1,1,2,5,10])
 
+        def test_get_factors(self):
+
+            self.assertEqual(basics.get_factors(10), {1,2,5,10})
+            self.assertEqual(basics.get_factors(12), {1,2,3,4,6,12})
+            self.assertEqual(basics.get_factors(1), {1})
 
 if __name__ == '__main__':
 
