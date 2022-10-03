@@ -95,3 +95,11 @@ def get_factors(n:int) -> set:
             factors |= {i, n // i}
     print(factors)
     return factors
+
+
+# Given an string create de minimum palindrome that contain this string
+def create_palindrome(n:str) -> str:
+    if n == n[::-1]:
+        return n
+    else:
+        return n[-1] + create_palindrome(n[:-1]) + n[-1]

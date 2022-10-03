@@ -55,3 +55,7 @@ def multi_fibonacci(iterarations:int, initialList: list, n:int):
 # Get factors of a given numbers
 def get_factors(n:int) -> set:
     pass
+
+# Given an string create de minimum palindrome that contain this string
+def create_palindrome(n:str) -> str:
+    pass

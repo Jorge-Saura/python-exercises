@@ -227,6 +227,16 @@ class TestBasics(unittest.TestCase):
             self.assertEqual(basics.get_factors(12), {1,2,3,4,6,12})
             self.assertEqual(basics.get_factors(1), {1})
 
+
+        def test_create_palindrome(self):
+
+            self.assertEqual(basics.create_palindrome('aba'), 'aba')
+            self.assertEqual(basics.create_palindrome('a'), 'a')
+            self.assertEqual(basics.create_palindrome('ba'), 'aba')
+            self.assertEqual(basics.create_palindrome('1234'),'4321234')
+
+            self.assertEqual(basics.create_palindrome('21234'),'4321234')
+
 if __name__ == '__main__':
 
     unittest.main()
