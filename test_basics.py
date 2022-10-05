@@ -1,6 +1,6 @@
 import unittest
 
-import basics as basics
+import basics_solutions as basics
 
 
 class TestBasics(unittest.TestCase):
@@ -236,6 +236,14 @@ class TestBasics(unittest.TestCase):
             self.assertEqual(basics.create_palindrome('1234'),'4321234')
 
             self.assertEqual(basics.create_palindrome('21234'),'4321234')
+
+
+        def test_sum_of_all(self):
+
+            self.assertEqual(basics.sum_of_all(1,3), 6)
+            self.assertEqual(basics.sum_of_all(6,9), 21)
+
+
 
 if __name__ == '__main__':
 
