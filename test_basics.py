@@ -242,6 +242,7 @@ class TestBasics(unittest.TestCase):
 
             self.assertEqual(basics.sum_of_all(1,3), 6)
             self.assertEqual(basics.sum_of_all(6,9), 21)
+            self.assertEqual(basics.sum_of_all(4,13), 74)
 
 
 

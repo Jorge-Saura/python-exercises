@@ -63,10 +63,10 @@ def create_palindrome(n:str) -> str:
 # This is from "Geeks for geeks" 
 # (https://practice.geeksforgeeks.org/problems/modified-numbers-and-queries0904/1)
 # Given two integers get ths sum of all the numbers between them, 
-# each number must be represented as the sum of its factors.
+# each number must be represented as the sum of its prime factors.
 # Example:
 # Input: a=1, b= 3 Output: 1->1 + 2->2 + 3->3 = 6
-# Input: a=6, b= 9 Output: 6->2+3 + 7->7 + 8->2+4 + 9->3= 22
+# Input: a=6, b= 9 Output: 6->2+3 + 7->7 + 8->2 + 9->3= 17
 def sum_of_all(a:int, b:int) -> int:
 
     pass

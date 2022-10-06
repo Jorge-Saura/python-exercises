@@ -105,16 +105,16 @@ def create_palindrome(n:str) -> str:
         return n[-1] + create_palindrome(n[:-1]) + n[-1]
 
 
-# This is from "Geeks for geeks" 
+# This is very similar at one from "Geeks for geeks" but simplified
 # (https://practice.geeksforgeeks.org/problems/modified-numbers-and-queries0904/1)
 # Given two integers get ths sum of all the numbers between them, 
 # each number must be represented as the sum of its factors.
 # Example:
 # Input: a=1, b= 3 Output: 1->1 + 2->2 + 3->3 = 6
 # Input: a=6, b= 9 Output: 6->2+3 + 7->7 + 8->2+4 + 9->3= 21
-def sum_of_all(a:int, b:int) -> int:
+def sum_of_all(l:int, r:int) -> int:
     result = 0 
-    for num in range(a,b+1):
+    for num in range(l,r+1):
         factors = set()
         for x in range(2,int(num**0.5)+1):
             if num%x == 0:
