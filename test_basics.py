@@ -1,6 +1,6 @@
 import unittest
 
-import basics_solutions as basics
+import basics as basics
 
 
 class TestBasics(unittest.TestCase):
